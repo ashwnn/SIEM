@@ -6,9 +6,6 @@ A complete SIEM + XDR setup that uses Wazuh to monitor, detect, and respond to s
 - [About The Project](#about-the-project)
   - [Learning Objectives](#learning-objectives)
 - [Architecture](#architecture)
-  - [Host Environment](#host-environment)
-  - [Virtual Machines](#virtual-machines)
-  - [Configuration](#configuration)
 - [License](#license)
 - [Contact](#contact)
 
@@ -43,22 +40,21 @@ Although managing smaller devices with anti-virus the goal of a SIEM is to help 
 - Containment strategies
 - Documentation and reporting
 
-## Architecture
+### Architecture
 
-### Host Environment
-- **Platform**: Ubuntu Server with QEMU/KVM
-- **Management**: Cockpit web GUI for VM management
-- **Virtualization**: Two virtual machines on an isolated virtual network
+**Network**
+Virtualized Network with NAT.
 
-### Virtual Machines
+**Virtual Machines**
 
 **WZ-SRV — Wazuh Server (Ubuntu)**
+
 - Central SIEM/XDR management server
 - Runs Wazuh Manager (threat detection engine)
 - Hosts Wazuh Indexer (data storage and search)
 - Provides Wazuh Dashboard (web-based UI)
 
-**USER-PC — Windows 11 Endpoint**
+**STU-PID — Windows 11 Endpoint**
 - Monitored client and attack target
 - Runs the Wazuh Agent for telemetry collection
 - Includes Atomic Red Team for simulations
