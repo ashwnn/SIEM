@@ -1,6 +1,6 @@
 # SIEM + XDR w/ Wazuh
 
-Deploy a complete SIEM + XDR setup that uses Wazuh to monitor, detect, and respond to simulated security threats in a controlled environment. Adittionally testing and configuring to mitigate and work with dealing with real-world threats.
+A complete SIEM + XDR setup that uses Wazuh to monitor, detect, and respond to simulated security threats in a controlled environment. Adittionally testing and configuring to mitigate and work with dealing with real-world threats.
 
 ## Table of Contents
 - [About The Project](#about-the-project)
